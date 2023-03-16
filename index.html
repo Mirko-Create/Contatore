@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pulsante Contatore</title>
+	<script>
+		var count = 0; // variabile per tenere traccia del numero di clic
+		function updateCount() {
+			count++; // incrementa il numero di clic
+			document.getElementById("count-textbox").value = count; // mostra il numero di clic nella casella di testo
+		}
+    function resetCount() {
+        count = 0;
+        document.getElementById("count-textbox").value = count;
+      }
+	</script>
+</head>
+<body>
+	<h1>Contatore</h1>
+	<button onclick="updateCount()">Premi il pulsante</button>
+  <button onclick="resetCount()">Resetta</button>
+	<br><br>
+	<input type="text" id="count-textbox" value="0" readonly> <!-- la casella di testo che mostra il numero di clic -->
+</body>
+</html>
